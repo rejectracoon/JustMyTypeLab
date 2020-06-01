@@ -3,6 +3,7 @@ let lowerKeys = "#keyboard-lower-container";
 
 const RANDOM_QUOTE_THING = "http://api.quotable.io/random";
 
+//Grab Quotes and shit
 function getQuote() {
   return fetch(RANDOM_QUOTE_THING)
     .then((response) => response.json())
@@ -16,7 +17,7 @@ async function getNextQuote() {
 
 getNextQuote();
 console.log(getNextQuote);
-
+//How to link these?
 let sentences = [
   "It's the job thats never started that takes the longest to finish.",
   "Moonlight drowns out all but the brightest stars.",
@@ -33,14 +34,17 @@ let letter = writing.substring(letterPlace, letterPlace + 1);
 let startDate;
 let startTime;
 let errors = 0;
-$("#upper-case").hide();
 
+
+$("#upper-case").hide();
 $(document).keydown(function (e) {
   if (e.which === 16) {
     $(upperKeys).show();
     $(lowerKeys).hide();
   }
 });
+//Hiding upper^
+
 
 $(document).keyup(function (e) {
   if (e.which === 16) {
@@ -82,7 +86,7 @@ $(document).keypress(function (e) {
         let minutes = (endTime - startTime) / 60000;
         wpm = Math.round(54 / minutes - 2 * errors);
         var confirmBox = confirm(
-          `You typed ${wpm} words per min! Would you like to try again?`
+          `You typed ${wpm} words per minute. Play again?`
         );
         if (confirmBox == true) {
           location.reload();
