@@ -1,5 +1,5 @@
-let upperKeys = "#upper-case";
-let lowerKeys = "#lower-case";
+let upperKeys = "#keyboard-upper-container";
+let lowerKeys = "#keyboard-lower-container";
 
 const RANDOM_QUOTE_THING = "http://api.quotable.io/random";
 
