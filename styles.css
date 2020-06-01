@@ -33,10 +33,10 @@
 #feedback {
   font-size: 20px;
 }
-.glyphicon-ok {
+.green {
   color: #1DA237
 }
 
-.glyphicon-remove {
+.red {
   color : #CD2626
 }

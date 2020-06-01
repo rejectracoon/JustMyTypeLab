@@ -81,14 +81,19 @@ $(document).keypress(function (e) {
     if (letterPlace === writing.length) {
       array++;
       if (array === sentences.length) {
-        let endDate = new Date();
-        let endTime = endDate.getTime();
-        let minutes = (endTime - startTime) / 60000;
+        
+        let datedate = new Date();
+        
+        let timetime = datedate.getTime();
+        
+        let minutes = (timetime - startTime) / 60000;
+        
         wpm = Math.round(54 / minutes - 2 * errors);
-        var confirmBox = confirm(
+       
+        var yesorno = confirm(
           `You typed ${wpm} words per minute. Play again?`
         );
-        if (confirmBox == true) {
+        if (yesorno == true) {
           location.reload();
         }
       } else {
